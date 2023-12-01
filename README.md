@@ -1,2 +1,0 @@
-# psdcte.me
-Student portfolios
