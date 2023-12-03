@@ -27,15 +27,17 @@ h3 {
 h4 {
     margin-top: -15px;
     font-size: 25px;
+    text-align: center;
 }
 
 #link {
     color: #50489D;
     font-size: 20px;
+
 }
 
 h2 {
-    margin-bottom: 35px;
+    margin-bottom: 15px;
     margin-top: -5px;
     font-size: 45px;
     text-decoration: underline;
@@ -54,4 +56,15 @@ h2 {
 
 .hide {
     display: none;
+}
+
+.courseName {
+    font-size: 20px;
+}
+
+a:active,
+a:link,
+a:visited,
+a:hover {
+    color: #50489D;
 }
