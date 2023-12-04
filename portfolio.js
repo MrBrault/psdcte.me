@@ -18,8 +18,9 @@ document.getElementById("linkP1").innerHTML = anchorP1[rand];
 
 
 
-let anchorP2 = ['<a href="../abizael">Photography 2</a>',
-             ]
+let anchorP2 = ['<a href="../abizael">Photography2</a>',
+                '<a href="../abizael">Photography2</a>'
+               ]
 
 
 
@@ -33,8 +34,9 @@ document.getElementById("linkP2").innerHTML = anchorP2[rand];
 
 
 
-let anchorA = ['<a href="../thomas564">Animation</a>'
-             ]
+let anchorA = ['<a href="../thomas564">Animations</a>'
+               '<a href="../thomas564">Animations</a>'
+              ]
 
 
 
