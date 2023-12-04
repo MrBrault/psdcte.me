@@ -12,3 +12,32 @@ let anchorP1 = ['<a href="../andrew616">Photography 1</a>',
 var rand = Math.floor(Math.random() * anchorP1.length);
 
 document.getElementById("linkP1").innerHTML = anchorP1[rand];
+
+
+
+
+
+
+let anchorP2 = ['<a href="../abizael">Photography 2</a>',
+             ]
+
+
+
+var rand = Math.floor(Math.random() * anchorP2.length);
+
+document.getElementById("linkP2").innerHTML = anchorP2[rand];
+
+
+
+
+
+
+
+let anchorA = ['<a href="../thomas564">Animation</a>'
+             ]
+
+
+
+var rand = Math.floor(Math.random() * anchorA.length);
+
+document.getElementById("linkA").innerHTML = anchorA[rand];
