@@ -58,13 +58,22 @@ h2 {
     display: none;
 }
 
-.courseName {
-    font-size: 20px;
-}
-
 a:active,
 a:link,
 a:visited,
 a:hover {
     color: #50489D;
+    font-weight: bold;
+}
+
+#linkP1,
+#linkP2,
+#linkP3,
+#linkP4,
+#linkW1,
+#linkW2,
+#linkA,
+#linkGD {
+    font-weight: bold;
+    color: gray
 }

@@ -1,10 +1,10 @@
-let anchorP1 = ['<a href="../andrew616/index.html">Photography 1</a>',
-              '<a href="../briseida148/index.html">Photography 1</a>',
-              '<a href="../grady050/index.html">Photography 1</a>',
-              '<a href="../isaac603/index.html">Photography 1</a>',
-              '<a href="../matthew819/index.html">Photography 1</a>',
-              '<a href="../odalis001/index.html">Photography 1</a>',
-              '<a href="../oscar254/index.html">Photography 1</a>'
+let anchorP1 = ['<a href="../andrew616">Photography 1</a>',
+              '<a href="../briseida148">Photography 1</a>',
+              '<a href="../grady050">Photography 1</a>',
+              '<a href="../isaac603">Photography 1</a>',
+              '<a href="../matthew819">Photography 1</a>',
+              '<a href="../odalis001">Photography 1</a>',
+              '<a href="../oscar254">Photography 1</a>'
              ]
 
 
