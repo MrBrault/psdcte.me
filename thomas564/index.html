@@ -11,20 +11,7 @@
 
     <link rel="stylesheet" href="../portfolio.css">
 
-    <style>
-        #photo1 {
-            display: none;
-        }
 
-        #photo2 {
-            display: none;
-        }
-
-        #animation {
-            display: none;
-        }
-
-    </style>
 
 
 
@@ -192,7 +179,7 @@
 
 
 
-        <div id="footer"></div>
+        <div id="footer">v3</div>
     </div>
 
     <script>
@@ -227,15 +214,27 @@
         ]
 
         function checkExists(fileId, divId) {
-            var countExist = 0;
+            var countError = 0;
             var div = document.getElementById(divId);
+
             for (var i = 0; i < fileId.length; i++) {
                 var img = document.getElementById(fileId[i]);
-                img.onload = function() {
-                    countExist++;
-                };
+
+                // Use a function closure or 'let' for block-scoping
+                (function(index) {
+                    img.onerror = function() {
+                        countError++;
+
+                        // Check if all images have errors
+                        if (countError === fileId.length) {
+                            div.style.display = 'none';
+                        }
+                    };
+                })(i);
             }
-            if (countExist > 0) {
+
+            // Check if any image errors occurred
+            if (countError === 0) {
                 div.style.display = 'block';
             }
         }

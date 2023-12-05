@@ -11,21 +11,17 @@
 
     <link rel="stylesheet" href="../portfolio.css">
 
-
     <style>
         #photo1 {
             display: none;
-
         }
 
         #photo2 {
             display: none;
-
         }
 
         #animation {
             display: none;
-
         }
 
     </style>
@@ -43,35 +39,34 @@
 
         <div class="well" id="photo1">
             <h2 id="linkP1">Photography 1</h2>
-            <script src="../portfolio.js"></script>
             <h3>Composition</h3>
 
             <div class="row">
                 <div class="col-sm-4">
-                    <img class="thumbnail" id="p1-01" src="p1-01.jpg" onerror='this.onerror = null; this.src="../none.jpg"'>
+                    <img class="thumbnail" id="p1-01" src="p1-01.jpg">
                     <h4>Texture</h4>
                 </div>
                 <div class="col-sm-4">
-                    <img class="thumbnail" id="p1-02" src="p1-02.jpg" onerror='this.onerror = null; this.src="../none.jpg"'>
+                    <img class="thumbnail" id="p1-02" src="p1-02.jpg">
                     <h4>Creative Angles</h4>
                 </div>
                 <div class="col-sm-4">
-                    <img class="thumbnail" id="p1-03" src="p1-03.jpg" onerror='this.onerror = null; this.src="../none.jpg"'>
+                    <img class="thumbnail" id="p1-03" src="p1-03.jpg">
                     <h4>Framing</h4>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-sm-4">
-                    <img class="thumbnail" id="p1-04" src="p1-04.jpg" onerror='this.onerror = null; this.src="../none.jpg"'>
+                    <img class="thumbnail" id="p1-04" src="p1-04.jpg">
                     <h4>Leading Lines</h4>
                 </div>
                 <div class="col-sm-4">
-                    <img class="thumbnail" id="p1-05" src="p1-05.jpg" onerror='this.onerror = null; this.src="../none.jpg"'>
+                    <img class="thumbnail" id="p1-05" src="p1-05.jpg">
                     <h4>Rule of Thirds</h4>
                 </div>
                 <div class="col-sm-4">
-                    <img class="thumbnail" id="p1-06" src="p1-06.jpg" onerror='this.onerror = null; this.src="../none.jpg"'>
+                    <img class="thumbnail" id="p1-06" src="p1-06.jpg">
                     <h4>Rule of Space</h4>
                 </div>
             </div>
@@ -82,11 +77,11 @@
             <div class="row">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-4">
-                    <img class="thumbnail" id="p1-07" src="p1-07.jpg" onerror='this.onerror = null; this.src="../none.jpg"'>
+                    <img class="thumbnail" id="p1-07" src="p1-07.jpg">
                     <h4>Aperture</h4>
                 </div>
                 <div class="col-sm-4">
-                    <img class="thumbnail" id="p1-08" src="p1-08.jpg" onerror='this.onerror = null; this.src="../none.jpg"'>
+                    <img class="thumbnail" id="p1-08" src="p1-08.jpg">
                     <h4>Shutter Speed</h4>
                 </div>
                 <div class="col-sm-2"></div>
@@ -98,76 +93,50 @@
             <div class="row">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-4">
-                    <img class="thumbnail" id="p1-09" src="p1-09.jpg" onerror='this.onerror = null; this.src="../none.jpg"'>
+                    <img class="thumbnail" id="p1-09" src="p1-09.jpg">
                     <h4>True to Life</h4>
                 </div>
                 <div class="col-sm-4">
-                    <img class="thumbnail" id="p1-10" src="p1-10.jpg" onerror='this.onerror = null; this.src="../none.jpg"'>
+                    <img class="thumbnail" id="p1-10" src="p1-10.jpg">
                     <h4>Creative</h4>
                 </div>
                 <div class="col-sm-2"></div>
             </div>
         </div>
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                // Array of photo file names
-                var photoFileNames = [
-                    "p1-01.jpg", "p1-02.jpg", "p1-03.jpg", "p1-04.jpg", "p1-05.jpg",
-                    "p1-06.jpg", "p1-07.jpg", "p1-08.jpg", "p1-09.jpg", "p1-10.jpg"
-                ];
 
-                // Reference to the #photo2 container
-                var photoContainer = document.getElementById("photo1");
 
-                // Check if at least one photo file exists
-                var atLeastOnePhotoExists = photoFileNames.some(function(fileName) {
-                    var img = new Image();
-                    img.src = fileName;
-
-                    return !img.complete || typeof img.naturalWidth !== "undefined" && img.naturalWidth > 0;
-                });
-
-                // Display or hide the #photo2 container based on the existence of photos
-                if (atLeastOnePhotoExists) {
-                    photoContainer.style.display = "block";
-                } else {
-                    photoContainer.style.display = "none";
-                }
-            });
-
-        </script>
 
         <div class="well" id="photo2">
-            <h2>Photography 2</h2>
+            <h2 id="linkP2">Photography 2</h2>
             <h3>Composition</h3>
 
             <div class="row">
                 <div class="col-sm-4">
-                    <img class="thumbnail" id="p2-01" src="p2-01.jpg" onerror='this.onerror = null; this.src="../none.jpg"'>
+                    <img class="thumbnail" id="p2-01" src="p2-01.jpg">
                     <h4>Texture</h4>
                 </div>
                 <div class="col-sm-4">
-                    <img class="thumbnail" id="p2-02" src="p2-02.jpg" onerror='this.onerror = null; this.src="../none.jpg"'>
+                    <img class="thumbnail" id="p2-02" src="p2-02.jpg">
                     <h4>Creative Angles</h4>
                 </div>
                 <div class="col-sm-4">
-                    <img class="thumbnail" id="p2-03" src="p2-03.jpg" onerror='this.onerror = null; this.src="../none.jpg"'>
+                    <img class="thumbnail" id="p2-03" src="p2-03.jpg">
                     <h4>Framing</h4>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-sm-4">
-                    <img class="thumbnail" id="p2-04" src="p2-04.jpg" onerror='this.onerror = null; this.src="../none.jpg"'>
+                    <img class="thumbnail" id="p2-04" src="p2-04.jpg">
                     <h4>Leading Lines</h4>
                 </div>
                 <div class="col-sm-4">
-                    <img class="thumbnail" id="p2-05" src="p2-05.jpg" onerror='this.onerror = null; this.src="../none.jpg"'>
+                    <img class="thumbnail" id="p2-05" src="p2-05.jpg">
                     <h4>Rule of Thirds</h4>
                 </div>
                 <div class="col-sm-4">
-                    <img class="thumbnail" id="p2-06" src="p2-06.jpg" onerror='this.onerror = null; this.src="../none.jpg"'>
+                    <img class="thumbnail" id="p2-06" src="p2-06.jpg">
                     <h4>Rule of Space</h4>
                 </div>
             </div>
@@ -178,11 +147,11 @@
             <div class="row">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-4">
-                    <img class="thumbnail" id="p2-07" src="p2-07.jpg" onerror='this.onerror = null; this.src="../none.jpg"'>
+                    <img class="thumbnail" id="p2-07" src="p2-07.jpg">
                     <h4>Aperture</h4>
                 </div>
                 <div class="col-sm-4">
-                    <img class="thumbnail" id="p2-08" src="p2-08.jpg" onerror='this.onerror = null; this.src="../none.jpg"'>
+                    <img class="thumbnail" id="p2-08" src="p2-08.jpg">
                     <h4>Shutter Speed</h4>
                 </div>
                 <div class="col-sm-2"></div>
@@ -194,92 +163,100 @@
             <div class="row">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-4">
-                    <img class="thumbnail" id="p2-09" src="p2-09.jpg" onerror='this.onerror = null; this.src="../none.jpg"'>
+                    <img class="thumbnail" id="p2-09" src="p2-09.jpg">
                     <h4>True to Life</h4>
                 </div>
                 <div class="col-sm-4">
-                    <img class="thumbnail" id="p2-10" src="p2-10.jpg" onerror='this.onerror = null; this.src="../none.jpg"'>
+                    <img class="thumbnail" id="p2-10" src="p2-10.jpg">
                     <h4>Creative</h4>
                 </div>
                 <div class="col-sm-2"></div>
             </div>
         </div>
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                // Array of photo file names
-                var photoFileNames = [
-                    "p2-01.jpg", "p2-02.jpg", "p2-03.jpg", "p2-04.jpg", "p2-05.jpg",
-                    "p2-06.jpg", "p2-07.jpg", "p2-08.jpg", "p2-09.jpg", "p2-10.jpg"
-                ];
 
-                // Reference to the #photo2 container
-                var photoContainer = document.getElementById("photo2");
 
-                // Check if at least one photo file exists
-                var atLeastOnePhotoExists = photoFileNames.some(function(fileName) {
-                    var img = new Image();
-                    img.src = fileName;
-
-                    return !img.complete || typeof img.naturalWidth !== "undefined" && img.naturalWidth > 0;
-                });
-
-                // Display or hide the #photo2 container based on the existence of photos
-                if (atLeastOnePhotoExists) {
-                    photoContainer.style.display = "block";
-                } else {
-                    photoContainer.style.display = "none";
-                }
-            });
-
-        </script>
 
         <div class="well" id="animation">
-            <h2>Animation Principles</h2>
+            <h2 id="linkA">Animation</h2>
             <div class="row">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-8">
+                    <img class="thumbnail" id="a-01" src="a-01.gif">
                     <h4>Final Project</h4>
-                    <img class="thumbnail" id="a-01" src="a-01.gif" onerror='this.onerror = null; this.src="../none.jpg"'>
                 </div>
                 <div class="col-sm-2"></div>
             </div>
         </div>
 
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                // Array of photo file names
-                var photoFileNames = [
-                    "a-01.gif"
-                ];
-
-                // Reference to the #photo2 container
-                var photoContainer = document.getElementById("animation");
-
-                // Check if at least one photo file exists
-                var atLeastOnePhotoExists = photoFileNames.some(function(fileName) {
-                    var img = new Image();
-                    img.src = fileName;
-
-                    return !img.complete || typeof img.naturalWidth !== "undefined" && img.naturalWidth > 0;
-                });
-
-                // Display or hide the #photo2 container based on the existence of photos
-                if (atLeastOnePhotoExists) {
-                    photoContainer.style.display = "block";
-                } else {
-                    photoContainer.style.display = "none";
-                }
-            });
-
-        </script>
 
 
         <div id="footer"></div>
     </div>
 
+    <script>
+        var photo1FileId = [
+            'p1-01',
+            'p1-02',
+            'p1-03',
+            'p1-04',
+            'p1-05',
+            'p1-06',
+            'p1-07',
+            'p1-08',
+            'p1-09',
+            'p1-10'
+        ]
 
+        var photo2FileId = [
+            'p2-01',
+            'p2-02',
+            'p2-03',
+            'p2-04',
+            'p2-05',
+            'p2-06',
+            'p2-07',
+            'p2-08',
+            'p2-09',
+            'p2-10'
+        ]
+
+        var animationFileId = [
+            'a-01'
+        ]
+
+        function checkExists(fileId, divId) {
+            var countError = 0;
+            var div = document.getElementById(divId);
+
+            for (var i = 0; i < fileId.length; i++) {
+                var img = document.getElementById(fileId[i]);
+
+                // Use a function closure or 'let' for block-scoping
+                (function(index) {
+                    img.onerror = function() {
+                        countError++;
+
+                        // Check if all images have errors
+                        if (countError === fileId.length) {
+                            div.style.display = 'none';
+                        }
+                    };
+                })(i);
+            }
+
+            // Check if any image errors occurred
+            if (countError === 0) {
+                div.style.display = 'block';
+            }
+        }
+
+        checkExists(photo1FileId, 'photo1')
+        checkExists(photo2FileId, 'photo2')
+        checkExists(animationFileId, 'animation')
+
+    </script>
 
 
 
