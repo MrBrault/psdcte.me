@@ -114,31 +114,29 @@
             <div class="row">
                 <div class="col-sm-4">
                     <img class="thumbnail" id="p2-01" src="p2-01.jpg">
-                    <h4>Texture</h4>
-                </div>
-                <div class="col-sm-4">
-                    <img class="thumbnail" id="p2-02" src="p2-02.jpg">
                     <h4>Creative Angles</h4>
                 </div>
                 <div class="col-sm-4">
-                    <img class="thumbnail" id="p2-03" src="p2-03.jpg">
+                    <img class="thumbnail" id="p2-02" src="p2-02.jpg">
                     <h4>Framing</h4>
+                </div>
+                <div class="col-sm-4">
+                    <img class="thumbnail" id="p2-03" src="p2-03.jpg">
+                    <h4>Leading Lines</h4>
                 </div>
             </div>
 
             <div class="row">
+                <div class="col-sm-2"></div>
                 <div class="col-sm-4">
                     <img class="thumbnail" id="p2-04" src="p2-04.jpg">
-                    <h4>Leading Lines</h4>
-                </div>
-                <div class="col-sm-4">
-                    <img class="thumbnail" id="p2-05" src="p2-05.jpg">
                     <h4>Rule of Thirds</h4>
                 </div>
                 <div class="col-sm-4">
-                    <img class="thumbnail" id="p2-06" src="p2-06.jpg">
+                    <img class="thumbnail" id="p2-05" src="p2-05.jpg">
                     <h4>Rule of Space</h4>
                 </div>
+                <div class="col-sm-2"></div>
             </div>
 
             <br>
@@ -147,11 +145,11 @@
             <div class="row">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-4">
-                    <img class="thumbnail" id="p2-07" src="p2-07.jpg">
+                    <img class="thumbnail" id="p2-06" src="p2-06.jpg">
                     <h4>Aperture</h4>
                 </div>
                 <div class="col-sm-4">
-                    <img class="thumbnail" id="p2-08" src="p2-08.jpg">
+                    <img class="thumbnail" id="p2-07" src="p2-07.jpg">
                     <h4>Shutter Speed</h4>
                 </div>
                 <div class="col-sm-2"></div>
@@ -163,11 +161,11 @@
             <div class="row">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-4">
-                    <img class="thumbnail" id="p2-09" src="p2-09.jpg">
+                    <img class="thumbnail" id="p2-08" src="p2-08.jpg">
                     <h4>True to Life</h4>
                 </div>
                 <div class="col-sm-4">
-                    <img class="thumbnail" id="p2-10" src="p2-10.jpg">
+                    <img class="thumbnail" id="p2-09" src="p2-09.jpg">
                     <h4>Creative</h4>
                 </div>
                 <div class="col-sm-2"></div>
@@ -192,7 +190,7 @@
 
 
 
-        <div id="footer">v8</div>
+        <div id="footer">v10.0.1</div>
     </div>
 
     <script>
@@ -218,8 +216,7 @@
             'p2-06',
             'p2-07',
             'p2-08',
-            'p2-09',
-            'p2-10'
+            'p2-09'
         ]
 
         var animationFileId = [
@@ -274,16 +271,15 @@
         ]
 
         var randP1 = Math.floor(Math.random() * anchorP1.length);
-
         document.getElementById("photo1Heading").innerHTML = anchorP1[randP1];
 
 
         let anchorP2 = [
-            '<a href="../abizael001">Photography 2</a>'
+            '<a href="../abizael001">Photography 2</a>',
+            '<a href="../lyla203">Photography 2</a>'
         ]
 
         var randP2 = Math.floor(Math.random() * anchorP2.length);
-
         document.getElementById("photo2Heading").innerHTML = anchorP2[randP2];
 
 
@@ -302,7 +298,6 @@
         ]
 
         var randA = Math.floor(Math.random() * anchorA.length);
-
         document.getElementById("animationHeading").innerHTML = anchorA[randA];
 
     </script>

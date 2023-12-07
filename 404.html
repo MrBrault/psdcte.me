@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Portfolios</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="portfolio.css">
+    <style>
+        #photo1 {
+            display: none;
+        }
+
+        #photo2 {
+            display: none;
+        }
+
+        #animation {
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 id="jumbo">Student Portfolio</h1>
+        </div>
+
+        <div class="well" id="photo1">
+            <h2 id="photo1Heading">Photography 1</h2>
+            <h3>Composition</h3>
+
+            <div class="row">
+                <!-- ... rest of your existing code ... -->
+            </div>
+        </div>
+
+        <div class="well" id="photo2">
+            <h2 id="photo2Heading">Photography 2</h2>
+            <h3>Composition</h3>
+
+            <div class="row">
+                <!-- ... rest of your existing code ... -->
+            </div>
+        </div>
+
+        <div class="well" id="animation">
+            <h2 id="animationHeading">Animation</h2>
+            <div class="row">
+                <!-- ... rest of your existing code ... -->
+            </div>
+        </div>
+
+        <div id="footer">v10.0.1</div>
+    </div>
+
+    <script>
+        // Function to get the student ID from the URL
+        function getStudentIDFromURL() {
+            // Get the path from the URL and split it by '/'
+            const pathParts = window.location.pathname.split('/');
+
+            // The last part of the path is the student ID
+            return pathParts[pathParts.length - 1];
+        }
+
+        // Get the student ID from the URL
+        const studentID = getStudentIDFromURL();
+
+        // Update the src attribute of the images based on the student ID
+        function updateImageSrc(fileIdArray, prefix) {
+            for (let i = 0; i < fileIdArray.length; i++) {
+                const img = document.getElementById(fileIdArray[i]);
+                if (img) {
+                    // Construct the new image source URL based on the student ID
+                    const newSrc = `${prefix}/${studentID}/${fileIdArray[i]}.jpg`;
+
+                    // Update the src attribute
+                    img.src = newSrc;
+                }
+            }
+        }
+
+        // Update images for Photography 1
+        updateImageSrc(photo1FileId, 'http://psdcte.me');
+
+        // Update images for Photography 2
+        updateImageSrc(photo2FileId, 'http://psdcte.me');
+
+        // Update images for Animation
+        updateImageSrc(animationFileId, 'http://psdcte.me');
+
+        // ... rest of your existing code ...
+
+    </script>
+</body>
+
+</html>

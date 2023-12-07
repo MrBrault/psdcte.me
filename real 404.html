@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Portfolios</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
+    <link rel="stylesheet" href="portfolio.css">
+
+    <style>
+        #jumbo {
+            margin-bottom: 10px;
+            font-size: 100px;
+        }
+
+        #confused {
+            max-width: 500px;
+            margin: 20px auto;
+        }
+
+        #redirect1 {
+            text-decoration: none;
+            margin: auto;
+            max-width: 500px;
+        }
+
+        #redirect2 {
+            text-decoration: none;
+            max-width: 500px;
+            margin: auto;
+        }
+
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="jumbotron">
+            <h1 id="jumbo">Ruff!</h1>
+            <p id="redirect1">We can't find that student porfolio.</p>
+            <img class="thumbnail" id="confused" src="confusedbulldog.png">
+            <p id="redirect2">Please try again or choose an example portfolio from the links below.</p>
+            <hr>
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-5">
+                    <p class="courseName" id="linkP1">Photography 1</p>
+                </div>
+                <div class="col-sm-5">
+                    <p class="courseName" id="linkP2">Photography 2</p>
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <p class="courseName" id="linkA">Animation</p>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">v10</div>
+
+
+    <script>
+        let anchorP1 = [
+            '<a href="andrew616">Photography 1</a>',
+            '<a href="briseida148">Photography 1</a>',
+            '<a href="grady050">Photography 1</a>',
+            '<a href="isaac603">Photography 1</a>',
+            '<a href="matthew819">Photography 1</a>',
+            '<a href="odalis001">Photography 1</a>',
+            '<a href="oscar254">Photography 1</a>'
+        ]
+
+        var randP1 = Math.floor(Math.random() * anchorP1.length);
+
+        document.getElementById("linkP1").innerHTML = anchorP1[randP1];
+
+
+        let anchorP2 = [
+            '<a href="abizael001">Photography 2</a>',
+            '<a href="lyla203">Photography 2</a>'
+        ]
+
+        var randP2 = Math.floor(Math.random() * anchorP2.length);
+
+        document.getElementById("linkP2").innerHTML = anchorP2[randP2];
+
+
+        let anchorA = [
+            '<a href="thomas564">Animation</a>',
+            '<a href="fuci001">Animation</a>',
+            '<a href="alejandro488">Animation</a>',
+            '<a href="sebastian399">Animation</a>',
+            '<a href="william473">Animation</a>',
+            '<a href="jovany513">Animation</a>',
+            '<a href="ulises697">Animation</a>',
+            '<a href="josleibi991">Animation</a>',
+            '<a href="bryson008">Animation</a>',
+            '<a href="avery207">Animation</a>',
+            '<a href="brandon025">Animation</a>'
+        ]
+
+        var randA = Math.floor(Math.random() * anchorA.length);
+
+        document.getElementById("linkA").innerHTML = anchorA[randA];
+
+    </script>
+
+
+
+</body>
+
+</html>

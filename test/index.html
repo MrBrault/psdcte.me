@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
+    <link rel="stylesheet" href="../portfolio.css">
+
+    <title>Student Portfolio</title>
+
+</head>
+
+<body>
+
+    <iframe id="myIframe" width="100%" height="800px" frameborder="0"></iframe>
+
+    <script>
+        // Get the iframe element
+        var iframe = document.getElementById('myIframe');
+
+        // Set the content of the iframe with relative links adjusted
+        iframe.contentDocument.write(`
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Content Inside Iframe</title>
+                <base href="../"> <!-- Set the base URL to resolve relative links -->
+            </head>
+            <body>
+                <p><a href="portfolio.html">Relative Link</a></p>
+            </body>
+            </html>
+        `);
+
+        // Make sure to close the document after writing
+        iframe.contentDocument.close();
+
+    </script>
+
+</body>
+
+</html>
