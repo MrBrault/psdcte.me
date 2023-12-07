@@ -185,54 +185,13 @@
 
 
         <div id="footer">v11</div>
+        <div id="check"></div>
     </div>
 
+
+
+
     <script>
-        // Function to get the student ID from the URL
-        function getStudentIDFromURL() {
-            // Get the path from the URL and split it by '/'
-            const pathParts = window.location.pathname.split('/');
-
-            // The last part of the path is the student ID
-            return pathParts[pathParts.length - 1];
-        }
-
-        // Get the student ID from the URL
-        const studentID = getStudentIDFromURL();
-
-        document.getElementById("footer").innerHTML = studentID;
-
-        // Update the src attribute of the images based on the student ID
-        function updateImageSrc(fileIdArray, prefix) {
-            for (let i = 0; i < fileIdArray.length; i++) {
-                const img = document.getElementById(fileIdArray[i]);
-                if (img) {
-                    // Construct the new image source URL based on the student ID
-                    const newSrc = `${prefix}/${studentID}/${fileIdArray[i]}.jpg`;
-
-                    // Update the src attribute
-                    img.src = newSrc;
-                }
-            }
-        }
-
-        // Update images for Photography 1
-        updateImageSrc(photo1FileId, 'http://psdcte.me');
-
-        // Update images for Photography 2
-        updateImageSrc(photo2FileId, 'http://psdcte.me');
-
-        // Update images for Animation
-        updateImageSrc(animationFileId, 'http://psdcte.me');
-
-
-
-
-
-
-
-
-
         var photo1FileId = [
             'p1-01',
             'p1-02',
@@ -261,6 +220,55 @@
         var animationFileId = [
             'a-01'
         ]
+
+
+
+
+
+        // Function to get the student ID from the URL
+        function getStudentIDFromURL() {
+            // Get the path from the URL and split it by '/'
+            const pathParts = window.location.pathname.split('/');
+
+            // The last part of the path is the student ID
+            return pathParts[pathParts.length - 1];
+        }
+
+        // Get the student ID from the URL
+        const studentID = getStudentIDFromURL();
+
+        document.getElementById("check").innerHTML = studentID;
+
+        // Update the src attribute of the images based on the student ID
+        function updateImageSrc(fileIdArray) {
+            for (let i = 0; i < fileIdArray.length; i++) {
+                const img = document.getElementById(fileIdArray[i]);
+                if (img) {
+                    // Construct the new image source URL based on the student ID
+                    const newSrc = `${studentID}/${fileIdArray[i]}.jpg`;
+
+                    // Update the src attribute
+                    img.src = newSrc;
+                }
+            }
+        }
+
+        // Update images for Photography 1
+        updateImageSrc(photo1FileId);
+
+        // Update images for Photography 2
+        updateImageSrc(photo2FileId);
+
+        // Update images for Animation
+        updateImageSrc(animationFileId);
+
+
+
+
+
+
+
+
 
         function checkExists(fileId, divId) {
             var countLoaded = 0;
