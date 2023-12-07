@@ -184,7 +184,7 @@
 
 
 
-        <div id="footer">v10.0.1</div>
+        <div id="footer">v11</div>
     </div>
 
     <script>
@@ -199,6 +199,8 @@
 
         // Get the student ID from the URL
         const studentID = getStudentIDFromURL();
+
+        document.getElementById("footer").innerHTML = studentID;
 
         // Update the src attribute of the images based on the student ID
         function updateImageSrc(fileIdArray, prefix) {
@@ -223,7 +225,119 @@
         // Update images for Animation
         updateImageSrc(animationFileId, 'http://psdcte.me');
 
-        // ... rest of your existing code ...
+
+
+
+
+
+
+
+
+        var photo1FileId = [
+            'p1-01',
+            'p1-02',
+            'p1-03',
+            'p1-04',
+            'p1-05',
+            'p1-06',
+            'p1-07',
+            'p1-08',
+            'p1-09',
+            'p1-10'
+        ]
+
+        var photo2FileId = [
+            'p2-01',
+            'p2-02',
+            'p2-03',
+            'p2-04',
+            'p2-05',
+            'p2-06',
+            'p2-07',
+            'p2-08',
+            'p2-09'
+        ]
+
+        var animationFileId = [
+            'a-01'
+        ]
+
+        function checkExists(fileId, divId) {
+            var countLoaded = 0;
+            var div = document.getElementById(divId);
+
+            for (let i = 0; i < fileId.length; i++) {
+                var img = document.getElementById(fileId[i]);
+
+                // Use a function closure or 'let' for block-scoping
+                (function(index) {
+                    img.onload = function() {
+                        countLoaded++;
+                        checkCompletion();
+                    };
+
+                })(i);
+            }
+
+            function checkCompletion() {
+                // Check if at least one image is loaded successfully
+                if (countLoaded > 0) {
+                    // Display the div
+                    div.style.display = 'block';
+                } else {
+                    // Hide the div
+                    div.style.display = 'none';
+                }
+            }
+        }
+
+        checkExists(photo1FileId, 'photo1')
+        checkExists(photo2FileId, 'photo2')
+        checkExists(animationFileId, 'animation')
+
+
+
+
+
+        let anchorP1 = [
+            '<a href="../andrew616">Photography 1</a>',
+            '<a href="../briseida148">Photography 1</a>',
+            '<a href="../grady050">Photography 1</a>',
+            '<a href="../isaac603">Photography 1</a>',
+            '<a href="../matthew819">Photography 1</a>',
+            '<a href="../odalis001">Photography 1</a>',
+            '<a href="../oscar254">Photography 1</a>'
+        ]
+
+        var randP1 = Math.floor(Math.random() * anchorP1.length);
+        document.getElementById("photo1Heading").innerHTML = anchorP1[randP1];
+
+
+        let anchorP2 = [
+            '<a href="../abizael001">Photography 2</a>',
+            '<a href="../lyla203">Photography 2</a>'
+        ]
+
+        var randP2 = Math.floor(Math.random() * anchorP2.length);
+        document.getElementById("photo2Heading").innerHTML = anchorP2[randP2];
+
+
+        let anchorA = [
+            '<a href="../thomas564">Animation</a>',
+            '<a href="../fuci001">Animation</a>',
+            '<a href="../alejandro488">Animation</a>',
+            '<a href="../sebastian399">Animation</a>',
+            '<a href="../william473">Animation</a>',
+            '<a href="../jovany513">Animation</a>',
+            '<a href="../ulises697">Animation</a>',
+            '<a href="../josleibi991">Animation</a>',
+            '<a href="../bryson008">Animation</a>',
+            '<a href="../avery207">Animation</a>',
+            '<a href="../brandon025">Animation</a>'
+        ]
+
+        var randA = Math.floor(Math.random() * anchorA.length);
+        document.getElementById("animationHeading").innerHTML = anchorA[randA];
 
     </script>
 </body>
